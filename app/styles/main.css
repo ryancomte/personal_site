@@ -1,5 +1,52 @@
+/*Reset*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
 body {
-    background: #fafafa;
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+/*END Reset*/
+
+
+body {
+    background: #f5f5f5;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color: #333;
 }
@@ -19,4 +66,48 @@ body {
     font-size: 60px;
     line-height: 1;
     letter-spacing: -1px;
+}
+
+nav-header{
+    display: block;
+    box-sizing: border-box;
+    background-color: #444444;
+    padding:25px;
+}
+
+nav-header ul li{
+    display: inline-block;
+    padding-left: 45px;
+    position: relative;
+}
+
+nav-header ul li.active:after{
+    content: '';
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 31px;
+    width: 0px;
+    height: 0px;
+    border-left: 10px solid transparent;
+    border-bottom: 10px solid #fff;
+    border-right: 10px solid transparent;
+}
+
+nav-header ul li.active:last-child:after{
+    right: 19px;
+}
+
+nav-header ul li a{
+    color: #cccccc;
+    text-decoration: none;
+}
+
+nav-header ul li a:hover{
+    color: #f1f1f1;
+}
+
+nav-header ul li.active a{
+    color: #f1f1f1;
+    font-weight: 500;
 }

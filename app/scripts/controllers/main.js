@@ -1,6 +1,7 @@
+(function(){
 'use strict';
 
-angular.module('personalSiteApp')
+angular.module('HomePageModule',[])
   .controller('MainCtrl', function ($scope) {
     $scope.awesomeThings = [
       'HTML5 Boilerplate',
@@ -8,3 +9,5 @@ angular.module('personalSiteApp')
       'Karma'
     ];
   });
+
+})()
