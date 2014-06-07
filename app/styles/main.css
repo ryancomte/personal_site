@@ -135,3 +135,14 @@ nav-header img {
     position: relative;
     top: -32px;
 }
+
+.my-image{
+    height: 125px;
+    width: 125px;
+    border: 1px solid #cccccc;
+    border-radius: 100px;
+    float: left;
+    margin: 23px;
+    background-image: url('../img/personalimage.png');
+    background-position: -8px -6px;
+}
