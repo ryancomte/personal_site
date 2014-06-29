@@ -3,7 +3,7 @@
 
 
   angular.module('personalSiteApp', ['ngCookies','ngResource','ngSanitize','ui.router','HomePageModule','HeaderModule','WorkModule','BlogModule',
-  'ContactModule'])
+  'ContactModule', 'ngAnimate'])
   .config(function ($stateProvider, $urlRouterProvider) {
     //delete $httpProvider.defaults.headers.common['X-Requested-With'];
     $urlRouterProvider.otherwise('/');

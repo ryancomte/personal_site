@@ -1,6 +1,7 @@
 <div class="center-container">
     <img src="img/logo.png"/>
-    <ul>
+    <div class="mobile-nav" ng-click="selected = !selected?true:false"></div>
+    <ul ng-hide="!selected && isMobile">
         <li ui-sref-active="active"><a href ui-sref="index">About</a></li>
         <li ui-sref-active="active"><a href ui-sref="work">Work</a></li>
         <li ui-sref-active="active"><a href ui-sref="blog">Blog</a></li>

@@ -1,0 +1,80 @@
+@import "mixins";
+
+nav-header{
+  display: block;
+  box-sizing: border-box;
+  background-color: #444444;
+  padding:25px;
+  @include breakpoint(mobile) {
+    padding: 0 0 6px 0;
+  }
+  .mobile-nav{
+    display:none;
+    @include breakpoint(mobile){
+      display: block;
+      background-color: white;
+      width: 25px;
+      height: 25px;
+    }
+  }
+  img{
+    float: left;
+    position: relative;
+    top: -32px;
+    @include breakpoint(mobile) {
+      left: 50%;
+      float: none;
+      top: -13px;
+      width: 132px;
+      margin-left: -66px;
+
+    }
+  }
+  ul{
+    margin-left: 227px;
+    @include breakpoint(mobile) {
+      margin-left: 0;
+    }
+    li{
+      display: inline-block;
+      position: relative;
+      @include breakpoint(mobile) {
+        width: 100%;
+        display: block;
+        text-align: center;
+        padding: 15px 0;
+      }
+      a{
+        color: #cccccc;
+        text-decoration: none;
+        padding-left: 22.5px;
+        padding-right: 22.5px;
+        &:hover{
+          color: #f1f1f1;
+        }
+      }
+      &.active{
+        @include breakpoint(mobile) {
+          background-color: #5daee0;
+        }
+        a{
+          color: #f1f1f1;
+          font-weight: 500;
+        }
+        &:after{
+          content: '';
+          display: block;
+          position: absolute;
+          top: 34px;
+          left: 12%;
+          width: 75%;
+          border-bottom: 7px solid #5daee0;
+          @include breakpoint(mobile) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
